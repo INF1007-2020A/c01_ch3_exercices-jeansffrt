@@ -36,6 +36,5 @@ def main() -> None:
     print(f"Conversion de 451 Farenheit en Celsius: {to_celsius(451.0)}")
 
 
-
 if __name__ == '__main__':
     main()
