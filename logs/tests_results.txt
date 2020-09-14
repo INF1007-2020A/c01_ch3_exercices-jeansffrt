@@ -1,22 +1,31 @@
 test_average (__main__.TestExercice) ... ok
 test_to_celsius (__main__.TestExercice) ... ok
-test_to_degrees (__main__.TestExercice) ... ERROR
+test_to_degrees (__main__.TestExercice) ... FAIL
 test_to_farenheit (__main__.TestExercice) ... ok
 test_to_radians (__main__.TestExercice) ... ok
 
 ======================================================================
-ERROR: test_to_degrees (__main__.TestExercice)
+FAIL: test_to_degrees (__main__.TestExercice)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "test_exercice.py", line 56, in test_to_degrees
-    output = [exercice.to_degrees(v) for v in values]
-  File "test_exercice.py", line 56, in <listcomp>
-    output = [exercice.to_degrees(v) for v in values]
-  File "/home/runner/work/c01_ch3_exercices-jeansffrt/c01_ch3_exercices-jeansffrt/exercice.py", line 16, in to_degrees
-    angle_mins = math.modf()
-TypeError: modf() takes exactly one argument (0 given)
+  File "test_exercice.py", line 62, in test_to_degrees
+    'Mauvais calcul de radians -> degres'
+AssertionError: Lists differ: [(114.59155902616465, 35.493541569878744, 2[198 chars]998)] != [(79.0980174562859, 5.881047377154118, 29.6[197 chars]998)]
+
+First differing element 0:
+(114.59155902616465, 35.493541569878744, 29.612494192724625)
+(79.0980174562859, 5.881047377154118, 29.612494192724625)
+
+- [(114.59155902616465, 35.493541569878744, 29.612494192724625),
+-  (-229.1831180523293, -10.987083139757488, -59.22498838544925),
+-  (286.4788975654116, 28.73385392469686, 44.031235481811564),
+-  (234.3397382085067, 20.384292510402133, 23.057550624127998)]
++ [(79.0980174562859, 5.881047377154118, 29.612494192724625),
++  (-278.1960349125718, 48.23790524569176, 0.7750116145507491),
++  (257.74504364071475, -15.297381557114704, 44.031235481811564),
++  (213.95544569810457, -2.673258113725865, 23.057550624127998)] : Mauvais calcul de radians -> degres
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.001s
+Ran 5 tests in 0.005s
 
-FAILED (errors=1)
+FAILED (failures=1)
