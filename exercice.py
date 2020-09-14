@@ -13,7 +13,7 @@ def to_radians(angle_degs: float, angle_mins: float, angle_secs: float) -> float
 
 def to_degrees(angle_rads: float) -> tuple:
     angle_degs = math.degrees(angle_rads)
-    angle_mins = 0.6
+    angle_mins = math.modf()
 
 def to_celsius(temperature: float) -> float:
     return (temperature - 32) / 1.8
